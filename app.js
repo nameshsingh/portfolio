@@ -7,9 +7,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/custom', (req, res) => {
-	res.status(418);
-	res.set('x-my-header', 'abcd');
-	res.send('Hello World!!');
-})
+	// res.status(418);
+	// res.set('x-my-header', 'abcd');
+	res.status(418).set('x-my-header', 'abcd').send('Hello Custom!!');
+});
 
 app.listen(port, () => console.log(`App listening no port ${port}`));
