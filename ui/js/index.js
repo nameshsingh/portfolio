@@ -8,7 +8,7 @@ inputBtn.addEventListener('keyup', function(event) {
         sendQuery(query);
     }
 });
-
+console.log("js file loaded");
 let ws;
 try {
   // Local dev
