@@ -32,7 +32,7 @@ const ProgressBar: React.FC<{ label: string; completed: number; total: number; c
 
 export default function LeetCodeProgress() {
   const [stats, setStats] = useState<LeetCodeStats | null>(null);
-  const username = "your_username"; // Replace with your LeetCode username
+  const username = "nameshsingh"; 
 
   useEffect(() => {
     fetch(`/api/leetcode?username=${username}`)
