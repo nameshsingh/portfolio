@@ -12,7 +12,6 @@ interface LeetCodeStats {
   hard: number;
   total: number;
   ranking: number;
-  contributionPoints: number;
   totalSubmissions: number;
 }
 
@@ -42,7 +41,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           }
           profile {
             ranking
-            contributionPoints
           }
         }
       }
@@ -81,7 +79,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       hard: submissions[3]?.count ?? 0,
       total: submissions.reduce((acc, curr) => acc + (curr.count ?? 0), 0),
       ranking: user.profile?.ranking ?? 0,
-      contributionPoints: user.profile?.contributionPoints ?? 0,
       totalSubmissions: totalSubmissions.reduce((acc: number, curr: any) => acc + (curr.count ?? 0), 0),
     };
 

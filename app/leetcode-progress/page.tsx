@@ -52,7 +52,6 @@ export default function LeetCodeProgress() {
       {/* Ranking and Contributions */}
       <div className="flex justify-between mb-4 text-sm">
         <p className="text-gray-600">🌍 Global Rank: <span className="font-semibold">{stats.ranking}</span></p>
-        <p className="text-gray-600">🏆 Contribution: <span className="font-semibold">{stats.contributionPoints}</span></p>
       </div>
 
       {/* Progress Bars */}
